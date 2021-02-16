@@ -2,7 +2,7 @@ c14180099
 Feronica Natalia Rivaldi
 <body>
 	<input type="date" id="datepicker1" name="datepicker1">
-	<!-- <input type="date" id="datepicker2" name="datepicker2"> -->
+	<input type="date" id="datepicker2" name="datepicker2">
 	<button type="button" onclick="daysdifference()"> Calculate days </button>
 
 	
@@ -12,11 +12,13 @@ Feronica Natalia Rivaldi
 			var date1 = document.getElementById("datepicker1").value;
 			var datep1 = new Date(date1);
 
-			var datetoday = new Date();
+			var date2 = document.getElementById("datepicker2").value;
+			var datep2 = new Date(date2);
 
-			var diff  = new Date(datep1 - datetoday);
+
+			var diff  = new Date(datep2 - datep1);
 	    	var days  = diff/1000/60/60/24;
-	    	alert(Math.floor(days)+1);
+	    	alert(Math.floor(days));
 	    	
 	    }
 
